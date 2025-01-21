@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { IoMenuOutline } from "react-icons/io5";
 import './NaviBar.css';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
@@ -17,7 +17,7 @@ const NaviBar = () => {
     const [isWeb, setIsWeb] = useState(false);
     let lastScrollY = 0;
 
-    const toggleMenuWeb=() => {
+    const toggleMenuWeb = () => {
         setIsWeb(!isWeb);
     };
 
@@ -33,7 +33,7 @@ const NaviBar = () => {
         setActiveDropdown(null);
     };
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY;
 
         if (isMobile) {
@@ -45,21 +45,23 @@ const NaviBar = () => {
         }
 
         lastScrollY = currentScrollY;
-    };
-
-    const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768); // Adjust width as needed
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleResize);
-        };
     }, [isMobile]);
 
+        // Memoized handleResize
+        const handleResize = useCallback(() => {
+            setIsMobile(window.innerWidth <= 768); // Adjust width as needed
+        }, []);
+
+
+        
+        useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleResize);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+                window.removeEventListener('resize', handleResize);
+            };
+        }, [handleScroll, handleResize]);
 
 
     const styles = {
