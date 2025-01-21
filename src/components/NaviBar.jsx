@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback,useRef } from 'react';
 import { IoMenuOutline } from "react-icons/io5";
 import './NaviBar.css';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
@@ -15,7 +15,7 @@ const NaviBar = () => {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [visible, setVisible] = useState(true);
     const [isWeb, setIsWeb] = useState(false);
-    let lastScrollY = 0;
+    const lastScrollY = useRef(0);
 
     const toggleMenuWeb = () => {
         setIsWeb(!isWeb);
@@ -37,14 +37,14 @@ const NaviBar = () => {
         const currentScrollY = window.scrollY;
 
         if (isMobile) {
-            if (currentScrollY > lastScrollY) {
+            if (currentScrollY > lastScrollY.current) {
                 setVisible(false); // Hide navbar on scroll down
             } else {
                 setVisible(true); // Show navbar on scroll up
             }
         }
 
-        lastScrollY = currentScrollY;
+        lastScrollY.current = currentScrollY; // Update the scroll position in the ref
     }, [isMobile]);
 
         // Memoized handleResize
