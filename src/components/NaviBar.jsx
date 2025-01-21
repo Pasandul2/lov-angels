@@ -58,7 +58,9 @@ const NaviBar = () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
         };
-    }, [handleScroll, handleResize, isMobile]); // Add both handlers and `isMobile`    
+    }, [isMobile]);
+
+
 
     const styles = {
 
