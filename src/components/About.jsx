@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import NaviBar from './NaviBar';
 import './About.css';
 import backgroundVideo from '../images/BackgroundVideo.mp4';
 import A1 from '../images/A1.png';
