@@ -1,0 +1,393 @@
+/* About.css */
+.About {
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    background-color: #000000;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgba(0, 0, 0,0.5); /* Optional: adds a semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll; /* Enables scrolling */
+}
+
+
+
+.card-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    background-color: black; /* Optional background color for the container */
+  }
+  
+  .custom-card-img {
+    width:100%;
+    height: 30%; /* Set the height you want */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  .custom-card {
+    width: 319px;
+    height: 660px;
+    background-color: #0e0e0e;
+    color: #fff;
+  }
+
+  .custom-card-Body{
+    margin: 25px;
+  }
+  
+  .custom-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-card ul {
+    list-style-type: disc;
+    text-align: left;
+  }
+
+  .custom-card ul li {
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .custom-card .btn-outline-light {
+    border-color: rgb(131, 129, 10);
+    color: white;
+    background-color: black;
+    width: 250px;
+    height: 40px;
+  }
+  
+  .custom-card .btn-outline-light:hover {
+    background-color: rgb(131, 129, 10);
+    color: white;
+  }
+
+  .textButton{
+    border-color: rgb(131, 129, 10);
+    color: white;
+    background-color: black;
+    width: 250px;
+    height: 40px;
+  }
+
+  .textButton:hover{
+    background-color: rgb(131, 129, 10);
+    color: white;
+  }
+
+  .slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+  }
+  
+  .slider-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 80%;
+    margin-bottom: 50px;
+   
+    
+  }
+  
+  .slider-image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .slider-text {
+    max-width: 500px;
+    margin-left: 20px;
+  }
+  
+  .slider-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .slider-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .slider-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider-arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+   
+    transition: color 0.3s;
+  }
+  
+  .slider-arrow:hover {
+    color: #ccc;
+  }
+  
+  .left-arrow {
+    margin-left: 10px;
+  }
+  
+  .right-arrow {
+    margin-right: 10px;
+  }
+
+  
+  .icard-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .icard {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .icard-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .icard:hover .icard-image {
+    transform: scale(1.1);
+  }
+  
+  .icard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .icard:hover .icard-overlay {
+    opacity: 1;
+  }
+  
+  .icard-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .icard-overlay p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+
+  .luxury-experience {
+    background-image: url('../images/E1.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.le-cn{
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.le-content {
+    max-width: 100%;
+    height: 100%;
+    margin: 200px;
+     /* Dark overlay for readability */
+}
+
+.le-content p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.le-content em {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.services-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.services-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+
+
+  
+  @media(max-width:700px){
+    
+.video-container {
+    height: 80vh;
+}
+
+.overlay {
+    padding-top: 60%;
+    padding-left: 0px;
+}
+
+
+
+.card-container {
+    display: grid;
+  }
+  
+  .custom-card-img {
+    width: 100%;
+    height: 200px; /* Set the height you want */
+    object-fit: cover; 
+  }
+
+  .custom-card {
+    width: 100%;
+    height: 660px;
+
+    color: #fff;
+  }
+  
+  .custom-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-card ul {
+    list-style-type: disc;
+    text-align: left;
+  }
+
+  .custom-card ul li {
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .custom-card .btn-outline-light {
+    
+    color: white;
+    background-color: black;
+    width: 250px;
+    height: 40px;
+  }
+  
+  .custom-card .btn-outline-light:hover {
+    background-color: rgb(131, 129, 10);
+    color: white;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aligns components vertically */
+}
+
+.component:nth-child(9) {
+    order: -4; /* Moves Component 5 to the top */
+}
+
+.component:nth-child(3) {
+    order: -3; /* Moves Component 5 to the top */
+}
+
+.component:nth-child(2) {
+    order: -1; /* Moves Component 5 to the top */
+}
+
+.component:nth-child(2) {
+    order: 0; /* Moves Component 5 to the top */
+}
+.component:nth-child(7) {
+    order: 1; /* Moves Component 5 to the top */
+}
+.component:nth-child(6) {
+    order: 3; /* Moves Component 5 to the top */
+}
+.component:nth-child(7) {
+    order: 4; /* Moves Component 5 to the top */
+}
+
+
+
+  
+  }

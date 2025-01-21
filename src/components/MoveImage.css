@@ -1,0 +1,13 @@
+@media(max-width:500px){
+    .AImageMove{
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .ImageMove {
+        width: 900px; /* Fixed width for the container */
+        
+        
+    }
+    
+}
